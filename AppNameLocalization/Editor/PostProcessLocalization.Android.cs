@@ -72,14 +72,10 @@ namespace AppNameLocalization.Editor
             }
 
             List<AppNameConfig> configs = appNameConfigs.Configs;
-            foreach (AppNameConfig productNameConfig in configs)
+            foreach (AppNameConfig appNameConfig in configs)
             {
-                string fixedCode = productNameConfig.Code;
-
-                fixedCode = fixedCode.Replace("-", "-r");
-
-                string dir = launcherPath + "/src/main/res/values-" + fixedCode;
-                SetStringsFile(dir, "strings.xml", stringXML, productNameConfig.AppName);
+                string dir = launcherPath + "/src/main/res/values-" + appNameConfig.Code;
+                SetStringsFile(dir, "strings.xml", stringXML, appNameConfig.AppName);
             }
         }
 
