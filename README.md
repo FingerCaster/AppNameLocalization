@@ -20,7 +20,7 @@ Unity3d中 安卓和IOS应用名本地化工具
 
      ![image](https://tva1.sinaimg.cn/large/e1b1a94bly1h7eiz7imc0j20ft05s0t0.jpg)
 
-     `Normal Config` 默认使用的应用名 如果你某个语言没有设置本地化 那么会使用它
+     `Normal Config` 默认使用的配置 填写对应下面Configs的Code 如果你某个语言没有设置本地化 那么会使用它
 
      `Configs`  所有的本地化配置  
 
