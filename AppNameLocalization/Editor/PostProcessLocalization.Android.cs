@@ -17,7 +17,13 @@ namespace AppNameLocalization.Editor
         {
             Debug.Log(path);
 #if UNITY_2019_1_OR_NEWER
-            string launcherPath = path.Substring(0, path.LastIndexOf('\\'))+"/launcher";
+            DirectoryInfo directoryInfo = new DirectoryInfo(path);
+            string projPath = directoryInfo?.Parent?.FullName;
+            if (string.IsNullOrEmpty(projPath))
+            {
+                throw new Exception("Path Parent folder is not exist.");
+            }
+            string launcherPath = projPath+"/launcher";
 #else
             string launcherPath = path;
 #endif
